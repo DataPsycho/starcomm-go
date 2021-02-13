@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var router = gin.Default()
+var router = gin.New()
 
 // Discovery is the entry point in server call
 func Discovery(c *gin.Context) {

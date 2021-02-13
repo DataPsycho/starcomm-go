@@ -29,4 +29,7 @@ removebin:
 removed:
 	docker ps -a | grep $(app_name) | awk '{print $$1}' | xargs docker rm
 
+post_prod:
+	curl -X POST -H "Content-Type: application/json" -d '{"from": "Saru", "message": "Saru to Discovery. Over!"}' https://starcomm-go-gqqotz5lna-ez.a.run.app/discovery
+
 
